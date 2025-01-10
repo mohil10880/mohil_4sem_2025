@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class ArithmeticOperations {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter first number: ");
+        String num1Str = scanner.nextLine();
+        
+        System.out.print("Enter second number: ");
+        String num2Str = scanner.nextLine();
+        
+        try {
+            Integer num1Int = Integer.valueOf(num1Str);
+            Integer num2Int = Integer.valueOf(num2Str)
+            int sum = num1Int + num2Int;
+            int difference = num1Int - num2Int;
+            int product = num1Int * num2Int;
+            double quotient = num2Int != 0 ? (double) num1Int / num2Int : Double.NaN;  // Handling division by zero
+          
+            System.out.println("Addition: " + sum);
+            System.out.println("Subtraction: " + difference);
+            System.out.println("Multiplication: " + product);
+            
+            if (Double.isNaN(quotient)) {
+                System.out.println("Division: Cannot divide by zero");
+            } else {
+                System.out.println("Division: " + quotient);
+            }
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid input! Please enter valid numeric strings.");
+        }
+        
+        scanner.close();
+    }
+}
+gram that takes two strings representing numbers, converts them to wrapper classes, and performs basic arithmetic operations (addition, subtraction, multiplication, division).
