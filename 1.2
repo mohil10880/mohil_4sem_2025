@@ -5,16 +5,10 @@ AIM : Write a program that takes two strings representing numbers, converts them
 PROGRAM CODE :
 
 import java.util.Scanner;
-
 public class WrapperClassArithmeticNoTryCatch {
-
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
-
-
         System.out.print("Enter the first number: ");
-
         String num1 = scanner.nextLine();
 
         System.out.print("Enter the second number: ");
@@ -23,15 +17,10 @@ public class WrapperClassArithmeticNoTryCatch {
 
         if (isNumeric(num1) && isNumeric(num2)) {
 
-            // Convert the strings to Double using wrapper class
 
             Double number1 = Double.parseDouble(num1);
 
             Double number2 = Double.parseDouble(num2);
-
- 
-
-            // Perform arithmetic operations
 
             double addition = number1 + number2;
 
@@ -65,10 +54,7 @@ public class WrapperClassArithmeticNoTryCatch {
 
         }
 
- 
-
         scanner.close();
-
     }
 
  
